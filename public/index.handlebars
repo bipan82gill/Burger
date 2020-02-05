@@ -1,0 +1,52 @@
+<div class = "container">
+  <div class = "row">
+    <div class = "col-md-6">
+          <h1>Eat-Da-Burger</h1>
+    </div>
+  </div>
+  <div class = "row">
+    <div class = "col-md-6">
+      <img src= "./assests/img/burger.jpg">
+    </div>
+  </div>
+  <div class = "row">
+    <div class = "col-md-6">
+        <h2>Ready to Eat Burger?</h2>
+        <ul>
+              {{#each burgers}}
+                {{#unless devoured}}
+                  {{> burger_name}}
+                  <button class="change-state" data-id="{{id}}"> Davoure it </button>
+                {{/unless}}
+              {{/each}}
+        </ul>
+    </div>
+    <div class = "col-md-6">
+        <h2>Enjoyed Burger!</h2>
+              <ul>
+              {{#each burgers}}
+                {{#if devoured}}
+                  {{> burger_name}}
+                {{/if}}
+              {{/each}}
+            </ul>
+    </div>
+  </div>
+
+</div>
+<div class = "container">
+<h2>Enter Your Burger</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="bur">Burger:</label>
+    <input type="text" id="bur" name="burger_name">
+  </div>
+
+  <div class="form-group">
+    <button type="button" class="btn btn-outline-success">Devour it</button>
+  </div>
+
+  <button type="submit">Order it</button>
+</form>
+</div>

@@ -1,0 +1,14 @@
+body{
+    background-color: #f1c11f;
+    margin :0;
+}
+h1{
+    font-size:3rem;
+    font-display: brown;
+    font-family: 'Black Ops One', cursive;
+}
+img{
+    height:150px;
+    width:200px;
+    border:2px;
+}
