@@ -5,7 +5,7 @@ $(function() {
     event.preventDefault();
 
     var newBurger = {
-      burger_name: $(".create-form[name=burger_name]").val().trim(),
+      burger_name: $("#bur").val().trim(),
       devoured: 0
     };
 
@@ -22,11 +22,12 @@ $(function() {
     );
   });
 
-  $("#devourBtn").on("click", function (event) {
+  $("#devoureBtn").on("click", function (event) {
+    console.log("hello !!!")
     var id = $(this).data("id");
-    var newDevour = $(this).data("value");
+    // var newDevour = $(this).data("value");
     var newDevourValue = {
-      devoured: newDevour
+      devoured: 1
     };
 
     $.ajax("/api/burgers/" + id, {
@@ -37,29 +38,10 @@ $(function() {
         location.reload();
       }
     );
-    
   });
-    // $(".change-state").on("click", function(event) {
-    //   var id = $(this).data("id");
-    //   var newState = $(this).data("newState");
   
-    //   var newState = {
-    //     devoured: 1
-    //   };
-  
-    //   // Send the PUT request.
-    //   $.ajax("/api/burgers/" + id, {
-    //     type: "PUT",
-    //     data: newState
-    //   }).then(
-    //     function() {
-    //       console.log("Devoured it", newState);
-    //       // Reload the page to get the updated list
-    //       location.reload();
-    //     }
-    //   );
-    // });
     $("#deleteBtn").on("click", function (event){
+      console.log("delete me")
       var id = $(this).data("id");
       $.ajax("/api/burgers/" + id, {
           type: "DELETE",
