@@ -151,3 +151,9 @@ All the recommended files and directories from the steps above should look like 
     └── layouts
         └── main.handlebars
 ```
+# Demo
+![alt text](public/assests/img/burger.gif "Demo")
+
+# Deployed Links
+https://burger-is-ready-to-eat.herokuapp.com/
+https://github.com/bipan82gill/burger
